@@ -1,7 +1,7 @@
 Learn C++
 
 1) Type of initialization
-2) Copy constructor
+2) Copy constructor [Done]
 3) Type conversion and typeid
 4) extern "C" & Name mangling
 5) Operator overloading
