@@ -9,12 +9,12 @@ Learn C++
 7) Virtual destructor?
 8) Const function & const variable
 9) vptr & vtable
-	reference of base pointing to child.
-	reference of base pointing to base.
-	reference of child pointing to child.
-	pointer of base class pointing to the base.
-	pointer of base class pointing to the child.
-	pointer of child pointing to child.
+	* reference of base pointing to child.
+	* reference of base pointing to base.
+	* reference of child pointing to child.
+	* pointer of base class pointing to the base.
+	* pointer of base class pointing to the child.
+	* pointer of child pointing to child.
 10) Exception handling
 11) static & dynamic library linking
 12) Name space
