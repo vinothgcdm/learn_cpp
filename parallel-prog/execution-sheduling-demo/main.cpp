@@ -1,3 +1,6 @@
+/**
+ * Two threads chopping vegetables
+ */
 #include <iostream>
 #include <thread>
 #include <chrono>
