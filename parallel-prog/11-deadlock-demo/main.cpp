@@ -10,9 +10,13 @@ void philosopher(std::mutex &first_chopstick, std::mutex &second_chopstick)
 {
     while (sushi_count > 0) {
         std::scoped_lock lock(first_chopstick, second_chopstick);
+        // first_chopstick.lock();
+        // second_chopstick.lock();
         if (sushi_count) {
             sushi_count--;
         }
+        // second_chopstick.unlock();
+        // first_chopstick.unlock();
     }
 }
 
