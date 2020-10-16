@@ -35,6 +35,4 @@ int main()
     chopping = false;
     barron.join();
     olivia.join();
-
-    return 0;
 }

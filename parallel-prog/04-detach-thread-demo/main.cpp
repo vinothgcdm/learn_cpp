@@ -24,6 +24,4 @@ int main()
     }
     printf("Barron is done!\n");
     printf("Does olivia joinable: %s\n", olivia.joinable() ? "Yes" : "No");
-
-    return 0;
 }
