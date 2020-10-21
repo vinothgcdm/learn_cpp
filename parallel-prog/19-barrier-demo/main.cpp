@@ -6,10 +6,6 @@
  * a barrier is a stopping point for a group of threads that prevents them
  * from proceeding until all, or enough threads, have reached the barrier.
  */
-
-/**
- * FIXME: This code is not yet tested. Failed to install boost library on windows.
- */
 #include <thread>
 #include <mutex>
 #include <boost/thread/barrier.hpp>
