@@ -19,3 +19,11 @@ int main()
 
     return 0;
 }
+
+/**
+ * Output:
+ *
+ * Value of X: 64, type of X: i
+ * Value of Y: 64, type of Y: f
+ * Value of Z: 64, type of Z: d
+ */
