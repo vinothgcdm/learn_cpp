@@ -13,6 +13,7 @@ void philosopher(std::mutex &first_chopstick, std::mutex &second_chopstick)
         if (!second_chopstick.try_lock())
         {
             first_chopstick.unlock();
+            std::this_thread::yield();
         } else {
             if (sushi_count) {
                 sushi_count--;
@@ -28,12 +29,16 @@ int main()
 {
     std::mutex chopstick_a;
     std::mutex chopstick_b;
-    std::array<std::thread, 10000> guests;
+    std::array<std::thread, 100000> guests;
+    auto start_time = std::chrono::steady_clock::now();
     for (size_t i = 0; i < guests.size(); i++) {
         guests[i] = std::thread(philosopher, std::ref(chopstick_a), std::ref(chopstick_b));
     }
     for (size_t i = 0; i < guests.size(); i++) {
         guests[i].join();
     }
-   printf("The philosophers are done eating.\n");
+    auto end_time = std::chrono::steady_clock::now();
+    auto elapsed_time = std::chrono::duration_cast<std::chrono::milliseconds>(end_time - start_time).count();
+    printf("Elapsed time: %.2f\n", elapsed_time / 1000.0);
+    printf("The philosophers are done eating.\n");
 }
